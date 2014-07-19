@@ -1,0 +1,452 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1AAD246C197A8473003DB7F8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AAD246B197A8473003DB7F8 /* Foundation.framework */; };
+		1AAD246E197A8473003DB7F8 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AAD246D197A8473003DB7F8 /* CoreGraphics.framework */; };
+		1AAD2470197A8473003DB7F8 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AAD246F197A8473003DB7F8 /* UIKit.framework */; };
+		1AAD2476197A8473003DB7F8 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1AAD2474197A8473003DB7F8 /* InfoPlist.strings */; };
+		1AAD2478197A8473003DB7F8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AAD2477197A8473003DB7F8 /* main.m */; };
+		1AAD247C197A8473003DB7F8 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AAD247B197A8473003DB7F8 /* AppDelegate.m */; };
+		1AAD247E197A8473003DB7F8 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1AAD247D197A8473003DB7F8 /* Images.xcassets */; };
+		1AAD2485197A8473003DB7F8 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AAD2484197A8473003DB7F8 /* XCTest.framework */; };
+		1AAD2486197A8473003DB7F8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AAD246B197A8473003DB7F8 /* Foundation.framework */; };
+		1AAD2487197A8473003DB7F8 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AAD246F197A8473003DB7F8 /* UIKit.framework */; };
+		1AAD248F197A8473003DB7F8 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1AAD248D197A8473003DB7F8 /* InfoPlist.strings */; };
+		1AAD2491197A8473003DB7F8 /* BorgTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AAD2490197A8473003DB7F8 /* BorgTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		1AAD2488197A8473003DB7F8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1AAD2460197A8472003DB7F8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1AAD2467197A8472003DB7F8;
+			remoteInfo = Borg;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		1AAD2468197A8472003DB7F8 /* Borg.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Borg.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1AAD246B197A8473003DB7F8 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		1AAD246D197A8473003DB7F8 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		1AAD246F197A8473003DB7F8 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		1AAD2473197A8473003DB7F8 /* Borg-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Borg-Info.plist"; sourceTree = "<group>"; };
+		1AAD2475197A8473003DB7F8 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		1AAD2477197A8473003DB7F8 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		1AAD2479197A8473003DB7F8 /* Borg-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Borg-Prefix.pch"; sourceTree = "<group>"; };
+		1AAD247A197A8473003DB7F8 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		1AAD247B197A8473003DB7F8 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		1AAD247D197A8473003DB7F8 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		1AAD2483197A8473003DB7F8 /* BorgTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BorgTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		1AAD2484197A8473003DB7F8 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		1AAD248C197A8473003DB7F8 /* BorgTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "BorgTests-Info.plist"; sourceTree = "<group>"; };
+		1AAD248E197A8473003DB7F8 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		1AAD2490197A8473003DB7F8 /* BorgTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BorgTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1AAD2465197A8472003DB7F8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1AAD246E197A8473003DB7F8 /* CoreGraphics.framework in Frameworks */,
+				1AAD2470197A8473003DB7F8 /* UIKit.framework in Frameworks */,
+				1AAD246C197A8473003DB7F8 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1AAD2480197A8473003DB7F8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1AAD2485197A8473003DB7F8 /* XCTest.framework in Frameworks */,
+				1AAD2487197A8473003DB7F8 /* UIKit.framework in Frameworks */,
+				1AAD2486197A8473003DB7F8 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1AAD245F197A8472003DB7F8 = {
+			isa = PBXGroup;
+			children = (
+				1AAD2471197A8473003DB7F8 /* Borg */,
+				1AAD248A197A8473003DB7F8 /* BorgTests */,
+				1AAD246A197A8473003DB7F8 /* Frameworks */,
+				1AAD2469197A8472003DB7F8 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		1AAD2469197A8472003DB7F8 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1AAD2468197A8472003DB7F8 /* Borg.app */,
+				1AAD2483197A8473003DB7F8 /* BorgTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		1AAD246A197A8473003DB7F8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1AAD246B197A8473003DB7F8 /* Foundation.framework */,
+				1AAD246D197A8473003DB7F8 /* CoreGraphics.framework */,
+				1AAD246F197A8473003DB7F8 /* UIKit.framework */,
+				1AAD2484197A8473003DB7F8 /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		1AAD2471197A8473003DB7F8 /* Borg */ = {
+			isa = PBXGroup;
+			children = (
+				1AAD247A197A8473003DB7F8 /* AppDelegate.h */,
+				1AAD247B197A8473003DB7F8 /* AppDelegate.m */,
+				1AAD247D197A8473003DB7F8 /* Images.xcassets */,
+				1AAD2472197A8473003DB7F8 /* Supporting Files */,
+			);
+			path = Borg;
+			sourceTree = "<group>";
+		};
+		1AAD2472197A8473003DB7F8 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				1AAD2473197A8473003DB7F8 /* Borg-Info.plist */,
+				1AAD2474197A8473003DB7F8 /* InfoPlist.strings */,
+				1AAD2477197A8473003DB7F8 /* main.m */,
+				1AAD2479197A8473003DB7F8 /* Borg-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		1AAD248A197A8473003DB7F8 /* BorgTests */ = {
+			isa = PBXGroup;
+			children = (
+				1AAD2490197A8473003DB7F8 /* BorgTests.m */,
+				1AAD248B197A8473003DB7F8 /* Supporting Files */,
+			);
+			path = BorgTests;
+			sourceTree = "<group>";
+		};
+		1AAD248B197A8473003DB7F8 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				1AAD248C197A8473003DB7F8 /* BorgTests-Info.plist */,
+				1AAD248D197A8473003DB7F8 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1AAD2467197A8472003DB7F8 /* Borg */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1AAD2494197A8473003DB7F8 /* Build configuration list for PBXNativeTarget "Borg" */;
+			buildPhases = (
+				1AAD2464197A8472003DB7F8 /* Sources */,
+				1AAD2465197A8472003DB7F8 /* Frameworks */,
+				1AAD2466197A8472003DB7F8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Borg;
+			productName = Borg;
+			productReference = 1AAD2468197A8472003DB7F8 /* Borg.app */;
+			productType = "com.apple.product-type.application";
+		};
+		1AAD2482197A8473003DB7F8 /* BorgTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1AAD2497197A8473003DB7F8 /* Build configuration list for PBXNativeTarget "BorgTests" */;
+			buildPhases = (
+				1AAD247F197A8473003DB7F8 /* Sources */,
+				1AAD2480197A8473003DB7F8 /* Frameworks */,
+				1AAD2481197A8473003DB7F8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1AAD2489197A8473003DB7F8 /* PBXTargetDependency */,
+			);
+			name = BorgTests;
+			productName = BorgTests;
+			productReference = 1AAD2483197A8473003DB7F8 /* BorgTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		1AAD2460197A8472003DB7F8 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = mobileborg;
+				TargetAttributes = {
+					1AAD2482197A8473003DB7F8 = {
+						TestTargetID = 1AAD2467197A8472003DB7F8;
+					};
+				};
+			};
+			buildConfigurationList = 1AAD2463197A8472003DB7F8 /* Build configuration list for PBXProject "Borg" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 1AAD245F197A8472003DB7F8;
+			productRefGroup = 1AAD2469197A8472003DB7F8 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1AAD2467197A8472003DB7F8 /* Borg */,
+				1AAD2482197A8473003DB7F8 /* BorgTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1AAD2466197A8472003DB7F8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1AAD2476197A8473003DB7F8 /* InfoPlist.strings in Resources */,
+				1AAD247E197A8473003DB7F8 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1AAD2481197A8473003DB7F8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1AAD248F197A8473003DB7F8 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1AAD2464197A8472003DB7F8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1AAD247C197A8473003DB7F8 /* AppDelegate.m in Sources */,
+				1AAD2478197A8473003DB7F8 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1AAD247F197A8473003DB7F8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1AAD2491197A8473003DB7F8 /* BorgTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		1AAD2489197A8473003DB7F8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1AAD2467197A8472003DB7F8 /* Borg */;
+			targetProxy = 1AAD2488197A8473003DB7F8 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		1AAD2474197A8473003DB7F8 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1AAD2475197A8473003DB7F8 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		1AAD248D197A8473003DB7F8 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1AAD248E197A8473003DB7F8 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		1AAD2492197A8473003DB7F8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		1AAD2493197A8473003DB7F8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		1AAD2495197A8473003DB7F8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Borg/Borg-Prefix.pch";
+				INFOPLIST_FILE = "Borg/Borg-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		1AAD2496197A8473003DB7F8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Borg/Borg-Prefix.pch";
+				INFOPLIST_FILE = "Borg/Borg-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		1AAD2498197A8473003DB7F8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Borg.app/Borg";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Borg/Borg-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "BorgTests/BorgTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		1AAD2499197A8473003DB7F8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Borg.app/Borg";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Borg/Borg-Prefix.pch";
+				INFOPLIST_FILE = "BorgTests/BorgTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1AAD2463197A8472003DB7F8 /* Build configuration list for PBXProject "Borg" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1AAD2492197A8473003DB7F8 /* Debug */,
+				1AAD2493197A8473003DB7F8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1AAD2494197A8473003DB7F8 /* Build configuration list for PBXNativeTarget "Borg" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1AAD2495197A8473003DB7F8 /* Debug */,
+				1AAD2496197A8473003DB7F8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		1AAD2497197A8473003DB7F8 /* Build configuration list for PBXNativeTarget "BorgTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1AAD2498197A8473003DB7F8 /* Debug */,
+				1AAD2499197A8473003DB7F8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 1AAD2460197A8472003DB7F8 /* Project object */;
+}
