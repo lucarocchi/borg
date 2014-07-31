@@ -10,6 +10,10 @@
 #warning "This project uses features only available in iOS SDK 3.0 and later."
 #endif
 
+# define SUBSECTION_HEIGHT 248
+# define SUBSECTION_WIDTH  140
+# define FBG "https://graph.facebook.com/"
+
 #ifdef __OBJC__
     #import <UIKit/UIKit.h>
     #import <Foundation/Foundation.h>

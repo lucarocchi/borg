@@ -1,0 +1,123 @@
+{
+    "location": {
+        "street": "Piazza Fernando De Lucia, 37",
+        "city": "Rome",
+        "state": "",
+        "country": "Italy",
+        "zip": "00139",
+        "latitude": 41.884214492759,
+        "longitude": 12.567388566195
+    },
+   "data": [
+            {
+            "id": "1422091914746949",
+            "logo": "http://www.mobileborg.com/newapp/freenapsy/logofn.jpg",
+            "name": "",
+            "category": "About",
+            "description":"Freenapsy is a company with 15 years of experience in mobile advertising, mobile application development, and web development.\n\nToday our main focus is to offer our clients premium quality solutions that today's IT needs, based on principles of transparency and with processes built to exceed expectations.",
+            "phone": "0664814690",
+            "background-color":"#242753",
+
+            "items":[
+                    
+                     {
+                     "name": "Mobile Advertising",
+                     "message": "The platforms Android, iOS, Windows Mobile and their evolutions are carefully followed to ensure the best marketing strategy for the client.",
+                     "picture":"http://www.mobileborg.com/newapp/freenapsy/mobieadv.jpg",
+                     "link":"http://www.freenapsy.com/index.php/en/mobile-advertising"
+                     },
+                     {
+                     "name": "Mobile Development",
+                     "message": "Our company provides comprehensive services for the development of mobile applications across all major platforms .",
+                     "picture":"http://www.mobileborg.com/newapp/freenapsy/mobiledev.jpg",
+                     "link":"http://www.freenapsy.com/index.php/en/mobile-development"
+                     },
+                     {
+                     "name": "Apps Incubator",
+                     "message": "Freenapsy can help you develop your idea, with a professional and expert advice at all stages, from the initial idea to the final product promotion.",
+                     "picture":"http://www.mobileborg.com/newapp/freenapsy/appinc.jpg",
+                     
+                     "link":"http://www.freenapsy.com/index.php/en/app-incubator"
+                     },
+                     {
+                     "name": "eCommerce Solutions",
+                     "message": "Turn to professionals for advice and strategic technological means used to start, strengthen or develop your own e-commerce, B2B and B2C.",
+                     "picture":"http://www.mobileborg.com/newapp/freenapsy/ecomm.jpg",
+                     "link":"http://www.freenapsy.com/index.php/en/ecommerce"
+                     }
+                 ]
+            },
+            {
+            "id": "1422091914746949",
+            "logo": "http://www.mobileborg.com/newapp/freenapsy/logofn.jpg",
+            
+            "name": "",
+            "category": "Freenapsy",
+            "description":"We believe the measure of our success is based on having the right team in place with an innovative spirit, a positive attitude, and the required level of effort needed for realizing the goals and ensuring client satisfaction and long-term success.",
+            "background-color":"#242753",
+
+            "items":[
+                     {
+                     "name": "Apps Incubator",
+                     "message": "Freenapsy can help you develop your idea, with a professional and expert advice at all stages, from the initial idea to the final product promotion.",
+                     "picture":"http://www.mobileborg.com/newapp/freenapsy/appinc.jpg",
+                     
+                     "link":"http://www.freenapsy.com/index.php/en/app-incubator"
+                     },
+                     {
+                     "name": "eCommerce Solutions",
+                     "message": "Turn to professionals for advice and strategic technological means used to start, strengthen or develop your own e-commerce, B2B and B2C.",
+                     "picture":"http://www.mobileborg.com/newapp/freenapsy/ecomm.jpg",
+                     "link":"http://www.freenapsy.com/index.php/en/ecommerce"
+                     },
+                     
+                     {
+                     "name": "Mobile Advertising",
+                     "message": "The platforms Android, iOS, Windows Mobile and their evolutions are carefully followed to ensure the best marketing strategy for the client.",
+                     "picture":"http://www.mobileborg.com/newapp/freenapsy/mobieadv.jpg",
+                     "link":"http://www.freenapsy.com/index.php/en/mobile-advertising"
+                     },
+                     {
+                     "name": "Mobile Development",
+                     "message": "Our company provides comprehensive services for the development of mobile applications across all major platforms .",
+                     "picture":"http://www.mobileborg.com/newapp/freenapsy/mobiledev.jpg",
+                     "link":"http://www.freenapsy.com/index.php/en/mobile-development"
+                     }
+                     ]
+            },
+            {
+            "id": "1422091914746949",
+            "logo": "http://www.mobileborg.com/newapp/freenapsy/logofn.jpg",
+            
+            "name": "",
+            "category": "Lavora con noi",
+            "description":"Ricerchiamo sviluppatori Android (JAVA) e IOS (ObjectiveC) per attività di progettazione e sviluppo di soluzioni basate su Android e IOS per Smartphone e Tablet.\n\nE’ inoltre richiesta una buona conoscenza di Java per esigenze specifiche in J2EE , Google Apps. E’ gradita conoscenza di Google Play Services e Google Play Game Services.",
+            "background-color":"#242753",
+            
+            "items":[
+                     {
+                     "name": "Sviluppatore Mobile Senior",
+                     "message": "Ricerchiamo sviluppatori Android (JAVA) e IOS (ObjectiveC) per attività di progettazione e sviluppo di soluzioni basate su Android e IOS per Smartphone e Tablet.",
+                     "picture":"",
+                     "background-color":"#ffffff",
+                     "link":""
+                     },
+                     {
+                     "name": "Sviluppatore Mobile Junior",
+                     "message": "Ricerchiamo sviluppatori Android (JAVA) e IOS (ObjectiveC) per attività di progettazione e sviluppo di soluzioni basate su Android e IOS per Smartphone e Tablet.",
+                     "picture":"",
+                     "background-color":"#ffffff",
+                     "link":""
+                     },
+                     {
+                     "name": "Sviluppatore Web PHP",
+                     "message": "Ricerchiamo uno sviluppatore Web PHP da inserire nel proprio team di sviluppo in Roma. Il lavoro sarà in loco, FULL TIME.",
+                     "picture":"",
+                     "background-color":"#ffffff",
+                     "link":""
+                     }
+                ]
+            }
+            
+     ]
+}

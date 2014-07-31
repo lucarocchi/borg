@@ -1,0 +1,279 @@
+{
+   "data": [
+            {
+            "id": "1422091914746949",
+            "name": "It's uptown",
+            "category": "Jazz",
+            "description":"George Benson's second album and the first to be produced by John Hammond. Recorded after his move to CBS.",
+            "location": {
+            "street": "Via dei Faggi 121",
+            "city": "Rome",
+            "state": "",
+            "country": "Italy",
+            "zip": "00172",
+            "latitude": 41.884214492759,
+            "longitude": 12.567388566195
+            },
+            "phone": "0664814690",
+            "cover": {
+            "cover_id": 1423334911289316,
+            "source": "http://images.amazon.com/images/P/B0012GN2GA.01_SL75_.jpg",
+            "offset_y": 50,
+            "offset_x": 0
+            },
+            "items":[
+                     {
+                     "name": "Clockwise",
+                     "message": "(4:25)",
+                     "picture":"http://images.amazon.com/images/P/B0012GN2GA.01_SL75_.jpg",
+                     "thumb":"https://i1.ytimg.com/vi/VH5F3QOMk20/default.jpg",
+                     "link":"https://www.youtube.com/watch?v=lxLE4kAAmIU"
+                     },
+                     {
+                     "name": "Summertime",
+                     "message": "(2:22)",
+                     "picture":"http://images.amazon.com/images/P/B0012GN2GA.01_SL75_.jpg",
+                     "thumb":"",
+                     "link":"https://www.youtube.com/watch?v=IcWMhowJTzM"
+                     },
+                     {
+                     "name": "Ain't That Peculiar",
+                     "message": "(2:54)",
+                     "picture":"http://images.amazon.com/images/P/B0012GN2GA.01_SL75_.jpg",
+                     "thumb":""
+                     },
+                     {
+                     "name": "Jaguar",
+                     "message": "(2:44)",
+                     "picture":"http://images.amazon.com/images/P/B0012GN2GA.01_SL75_.jpg",
+                     "thumb":""
+                     },
+                     {
+                     "name": "Willow Weep For Me",
+                     "message": "(7:37)",
+                     "picture":"http://images.amazon.com/images/P/B0012GN2GA.01_SL75_.jpg",
+                     "thumb":""
+                     },
+                     {
+                     "name": "A Foggy Day",
+                     "message": "(2:31)",
+                     "picture":"http://images.amazon.com/images/P/B0012GN2GA.01_SL75_.jpg",
+                     "thumb":""
+                     }
+                 ]
+            },
+            
+            {
+            "id": "1422091914746949",
+            "name": "Breezin",
+            "category": "Pop",
+            "location": {
+            "street": "Via dei Faggi 121",
+            "city": "Rome",
+            "state": "",
+            "country": "Italy",
+            "zip": "00172",
+            "latitude": 41.884214492759,
+            "longitude": 12.567388566195
+            },
+            "phone": "0664814690",
+            "cover": {
+            "cover_id": 1423334911289316,
+            "source": "http://www.copertinedvd.org/copertine-cd-file/G/george_benson_-_original_album_series_(cd_1_breezin')_-_front.jpg",
+            "offset_y": 50,
+            "offset_x": 0
+            },
+            "items":[
+                     {
+                     "name": "Breezin",
+                     "message": "Bobby Womack 5:40",
+                     "picture":"http://www.copertinedvd.org/copertine-cd-file/G/george_benson_-_original_album_series_(cd_1_breezin')_-_front.jpg",
+                     "thumb":""
+                     },
+                     {
+                     "name": "This Masquerade",
+                     "message": "Leon Russell 8:03",
+                     "picture":"http://www.copertinedvd.org/copertine-cd-file/G/george_benson_-_original_album_series_(cd_1_breezin')_-_front.jpg",
+                     "thumb":""
+                     },
+                     {
+                     "name": "Six to Four",
+                     "message": "Phil Upchurch 5:06",
+                     "picture":"http://www.copertinedvd.org/copertine-cd-file/G/george_benson_-_original_album_series_(cd_1_breezin')_-_front.jpg",
+                     "thumb":""
+                     },
+                     {
+                     "name": "Affirmation",
+                     "message": "José Feliciano 7:01",
+                     "picture":"http://www.copertinedvd.org/copertine-cd-file/G/george_benson_-_original_album_series_(cd_1_breezin')_-_front.jpg",
+                     "thumb":""
+                     },
+                     {
+                     "name": "So This is Love?",
+                     "message": "Benson 7:03",
+                     "picture":"http://www.copertinedvd.org/copertine-cd-file/G/george_benson_-_original_album_series_(cd_1_breezin')_-_front.jpg",
+                     "thumb":""
+                     },
+                     {
+                     "name": "Lady",
+                     "message": "Ronnie Foster 5:49",
+                     "picture":"http://www.copertinedvd.org/copertine-cd-file/G/george_benson_-_original_album_series_(cd_1_breezin')_-_front.jpg",
+                     "thumb":""
+                     }
+                     ]
+            
+            },
+            
+
+            
+
+      {
+         "id": "131969453521247",
+         "name": "Give me the night",
+         "category": "Pop",
+         "location": {
+            "street": "Via della Costituente 18/22",
+            "city": "Grottaferrata",
+            "state": "",
+            "country": "Italy",
+            "zip": "00046",
+            "latitude": 41.7842569061,
+            "longitude": 12.6763967831
+         },
+         "phone": "069415084",
+         "cover": {
+            "cover_id": 398062243578632,
+            "source": "http://img.cdandlp.com/2013/02/imgL/115876725.jpg",
+            "offset_y": 27,
+            "offset_x": 0
+         },
+         "items":[
+            {
+                  "name": "Love X Love",
+                  "message": "",
+                  "picture":"http://img.cdandlp.com/2013/02/imgL/115876725.jpg",
+                  "thumb":"",
+                  "link":"https://www.youtube.com/watch?v=sr1qEOYsaok"
+                  
+            },
+                  {
+                  "name": "On Brodway",
+                  "message": "",
+                  "picture":"http://img.cdandlp.com/2013/02/imgL/115876725.jpg",
+                  "thumb":""
+                  
+                  },
+                  {
+                  "name": "Moody's mood",
+                  "message": "",
+                  "picture":"http://img.cdandlp.com/2013/02/imgL/115876725.jpg",
+                  "thumb":""
+                  
+                  },
+                  {
+                  "name": "Give me the night",
+                  "message": "",
+                  "picture":"http://img.cdandlp.com/2013/02/imgL/115876725.jpg",
+                  "thumb":""
+                  
+                  },
+                  {
+                  "name": "What's on your mind",
+                  "message": "",
+                  "picture":"http://img.cdandlp.com/2013/02/imgL/115876725.jpg",
+                  "thumb":""
+                  
+                  },
+                  {
+                  "name": "Dinorah,Dinorah",
+                  "message": "",
+                  "picture":"http://img.cdandlp.com/2013/02/imgL/115876725.jpg",
+                  "thumb":""
+                  
+                  },
+                  {
+                  "name": "Love Dance",
+                  "message": "",
+                  "picture":"http://img.cdandlp.com/2013/02/imgL/115876725.jpg",
+                  "thumb":""
+                  
+                  },
+                  {
+                  "name": "Star of a story",
+                  "message": "",
+                  "picture":"http://img.cdandlp.com/2013/02/imgL/115876725.jpg",
+                  "thumb":""
+                  
+                  }
+         ]
+         
+      },
+      {
+            "id": "1422091914746949",
+            "name": "Inspiration",
+            "category": "Jazz",
+            "location": {
+            "street": "Via dei Faggi 121",
+            "city": "Rome",
+            "state": "",
+            "country": "Italy",
+            "zip": "00172",
+            "latitude": 41.884214492759,
+            "longitude": 12.567388566195
+            },
+            "phone": "0664814690",
+            "cover": {
+            "cover_id": 1423334911289316,
+            "source": "http://www.todayonline.com/sites/default/files/styles/photo_gallery_image_lightbox/public/15614111_0.JPG",
+            "offset_y": 50,
+            "offset_x": 0
+            },
+            "items":[
+                     {
+                     "name": "Mona Lisa",
+                     "message": "",
+                     "picture":"http://www.todayonline.com/sites/default/files/styles/photo_gallery_image_lightbox/public/15614111_0.JPG",
+                     "thumb":""
+                     
+                     },
+                     {
+                     "name": "Just One of Those Things",
+                     "message": "Writer:Cole Porter",
+                     "picture":"",
+                     "thumb":"http://www.todayonline.com/sites/default/files/styles/photo_gallery_image_lightbox/public/15614111_0.JPG"
+                     
+                     },
+                     {
+                     "name": "Unforgettable",
+                     "message": "Writer:Irving Gordon",
+                     "picture":"http://www.todayonline.com/sites/default/files/styles/photo_gallery_image_lightbox/public/15614111_0.JPG",
+                     "thumb":""
+                     
+                     },
+                     {
+                     "name": "Walkin' My Baby",
+                     "message": "",
+                     "picture":"",
+                     "thumb":"http://www.todayonline.com/sites/default/files/styles/photo_gallery_image_lightbox/public/15614111_0.JPG"
+                     
+                     },
+                     {
+                     "name": "When I Fall in Love",
+                     "message": "",
+                     "picture":"http://www.todayonline.com/sites/default/files/styles/photo_gallery_image_lightbox/public/15614111_0.JPG",
+                     "thumb":""
+                     
+                     },
+                     {
+                     "name": "Route 66",
+                     "message": "",
+                     "picture":"http://www.todayonline.com/sites/default/files/styles/photo_gallery_image_lightbox/public/15614111_0.JPG",
+                     "thumb":""
+                     
+                     }
+            ]
+       }
+            
+            
+   ]
+}

@@ -1,0 +1,15 @@
+{
+    "facebook": {
+        "appid": "204264309603362",
+        "pageid": "168939929818827",
+        "permissions": "email"
+    },
+    "location": {
+        "city": "Monte Compatri",
+        "country": "Italy",
+        "latitude": 41.804719703185,
+        "longitude": 12.735113581786,
+        "street": "via S. Silvestro 49",
+        "zip": "00040"
+    }
+}

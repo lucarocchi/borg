@@ -1,0 +1,384 @@
+{
+    "facebookx": {
+        "appid": "204264309603362",
+        "pageid": "168939929818827",
+        "permissions": ""
+    },
+    "location": {
+        "street": "Via dei Faggi 121",
+        "city": "Rome",
+        "state": "",
+        "country": "Italy",
+        "zip": "00172",
+        "latitude": 41.884214492759,
+        "longitude": 12.567388566195
+    },
+   "data": [
+            {
+            "id": "1422091914746949",
+            "logo": "http://www.userfarm.com/global/img/userfarm_logo_mobile.png",
+            "theme":"light",
+            "category": "The first choice for content creation by major brands.",
+            "description":"We galvanise the skills and creativity of our network of global filmmakers, to bring compelling content and quality videos with rapidity and scale. ",
+            "phone": "0664814690",
+            "cover": {
+            "cover_id": 1423334911289316,
+            "source": "https://www.userfarm.com/global/img/slider-home/11.jpg",
+            "offset_y": 60,
+            "offset_x": 0
+            },
+            
+            "items":[
+                     
+                     {
+                     "name": "Menicon Lenses",
+                     "message": "Menicon would like to engage your talent to create a viral video that will encourage consumers to use the daily disposable lenses 'Miru 1day Menicon Flat Pack' when they cannot (or do not want to) wear their glasses.",
+                     "picture":"https://cdn2.userfarm.com/call/0/453/logo/full/logo.jpg",
+                     "link":"https://www.userfarm.com/us/call/menicon-lenses/453/description"
+                     },
+                     {
+                     "name": "Tetes Brulees",
+                     "message": "The sweet that will blow your head away\n€ 10.000",
+                     "picture":"https://cdn3.userfarm.com/call/0/438/logo/full/logo.jpg"
+                     },
+                     {
+                     "name": "Barilla",
+                     "message": "Love life, love pasta: in your own way!\n€ 40.000",
+                     "picture":"https://cdn4.userfarm.com/call/0/394/logo/full/logo.jpg",
+                     
+                     "link":"https://www.userfarm.com/us/call/love-life-love-pasta-in-your-own-way/394/description"
+                     },
+                     {
+                     "name": "iDBus",
+                     "message": "The best iD to travel\n€ 10.000",
+                     "picture":"https://cdn1.userfarm.com/call/0/447/logo/full/logo.jpg",
+                     
+                     "link":"https://www.userfarm.com/us/call/idbus-the-best-iD-to-travel/447/description"
+                     }
+                     ]
+            },
+            
+            
+            {
+            "id": "1422091914746949",
+            "name": "Find Projects",
+            "category": "The first choice for content creation by major brands.",
+            "description":"We galvanise the skills and creativity of our network of global filmmakers, to bring compelling content and quality videos with rapidity and scale. ",
+            "phone": "0664814690",
+            "cover": {
+            "cover_id": 1423334911289316,
+            "source": "https://www.userfarm.com/global/img/slider-home/12.jpg",
+            "offset_y": 0,
+            "offset_x": 0
+            },
+            "items":[
+                    
+                     {
+                     "template":"2",
+                     "name": "Menicon Lenses",
+                     "message": "Menicon would like to engage your talent to create a viral video that will encourage consumers to use the daily disposable lenses 'Miru 1day Menicon Flat Pack' when they cannot (or do not want to) wear their glasses.",
+                     "picture":"https://cdn2.userfarm.com/call/0/453/logo/full/logo.jpg",
+                     "link":"https://www.userfarm.com/us/call/menicon-lenses/453/description"
+                     },
+                     {
+                     "template":"2",
+                     "name": "Tetes Brulees",
+                     "message": "The sweet that will blow your head away\n€ 10.000",
+                     "picture":"https://cdn3.userfarm.com/call/0/438/logo/full/logo.jpg"
+                     },
+                     {
+                     "template":"2",
+                     "name": "Barilla",
+                     "message": "Love life, love pasta: in your own way!\n€ 40.000",
+                     "picture":"https://cdn4.userfarm.com/call/0/394/logo/full/logo.jpg",
+                     
+                     "link":"https://www.userfarm.com/us/call/love-life-love-pasta-in-your-own-way/394/description"
+                     },
+                     {
+                     "template":"2",
+                     "name": "iDBus",
+                     "message": "The best iD to travel\n€ 10.000",
+                     "picture":"https://cdn1.userfarm.com/call/0/447/logo/full/logo.jpg",
+                     
+                     "link":"https://www.userfarm.com/us/call/idbus-the-best-iD-to-travel/447/description"
+                     }
+                 ]
+            },
+            
+            {
+            "id": "1422091914746949",
+            "name": "Top Videos",
+            "category": "Best of",
+            "description":"This is a selection of winning submissions by our worldwide community of over 55.000 videomakers, producers and animators coming from over 125 different countries.",
+            "location": {
+            "street": "Via dei Faggi 121",
+            "city": "Rome",
+            "state": "",
+            "country": "Italy",
+            "zip": "00172",
+            "latitude": 41.884214492759,
+            "longitude": 12.567388566195
+            },
+            "phone": "0664814690",
+            "cover": {
+            "cover_id": 1423334911289316,
+            "source": "https://www.userfarm.com/global/img/slider-home/10.jpg",
+            "offset_y": 0,
+            "offset_x": 0
+            },
+            "items":[
+                     {
+                     "name": "World Cup fans show their passion",
+                     "message": "William Hill",
+                     "picture":"https://cdn1.userfarm.com/user/0/32/video/72682/thumb/BIG/32_72682_world-cup-fans-show-their-passion.jpg",
+                     "iconmode":"fill",
+                     
+                     "link":"https://www.userfarm.com/us/content/world-cup-fans-show-their-passion/72682"
+                     },
+                     {
+                     "name": "Do you Vespa? Genuine people",
+                     "message": "video secondo premio vespa",
+                     "picture":"https://cdn2.userfarm.com/user/197/98804/video/72647/thumb/BIG/98804_72647_genuine-people.jpg",
+                     "iconmode":"fill",
+                     "link":"https://www.userfarm.com/us/content/genuine-people/72647#content-media"
+                     },
+                     {
+                     "name": "KLM VIAJE SIN ESCALAS",
+                     "message": "Klm vídeo para la nueva ruta Bilbao-Amsterdam",
+                     "picture":"https://cdn3.userfarm.com/user/71/35925/video/72279/thumb/BIG/35925_72279_klm-viaje-sin-escalas.jpg",
+                     "iconmode":"fill",
+                     "link":"https://www.userfarm.com/us/content/klm-viaje-sin-escalas/72279"
+                     },
+                     {
+                     "name": "Lufthansa: Una finestra sul mondo",
+                     "message": "video caricato in data 17/04/2014 e ricaricato in data 02/06/2014 con i rework richiesti dal cliente",
+                     "picture":"https://cdn4.userfarm.com/user/183/91948/video/71951/thumb/BIG/91948_71951_una-finestra-sul-mondo.jpg",
+                     "iconmode":"fill",
+                     "link":"https://www.userfarm.com/us/content/una-finestra-sul-mondo/71951#content-media"
+                     },
+                     {
+                     "name": "Orizzonti di gloria",
+                     "message": "Il protagonista, rientrando a casa, viene coinvolto in una festa a sorpresa organizzata dai suoi amici per il nuovo posto di lavoro all'estero da lui ottenuto.",
+                     "picture":"https://cdn1.userfarm.com/user/184/92434/video/71865/thumb/BIG/92434_71865_orizzonti-di-gloria.jpg",
+                     "iconmode":"fill",
+                     "link":"https://www.userfarm.com/us/content/orizzonti-di-gloria/71865#content-media"
+                     },
+                     {
+                     "name": "Beck's Brasil 2014",
+                     "message": "'La voglia di primeggiare spinge ad ottenere il successo. Festeggiare il successo spinge a primeggiare ancora.' - Regia e fotografia, Paolo Sodi - Sceneggiatura, Luigi Migliardi - Camera, Lorenzo Magistrato - Protagonista, Alessio Bariviera",
+                     "picture":"https://cdn2.userfarm.com/user/185/92526/video/71759/thumb/BIG/92526_71759_beck-s-brasil-2014.jpg",
+                     "iconmode":"fill",
+                     "link":"https://www.userfarm.com/us/content/beck-s-brasil-2014/71759#content-media"
+                     },
+                  ]
+            
+            },
+
+            {
+            "id": "1422091914746949",
+            "name": "For Filmakers",
+            "category": "We are 55,000 content creators.",
+            "description":"On Userfarm the best filmmakers can work for the most recognisable brands across the world, including international broadcasters, to create adverts, viral video, documentaries and web-series.\nBy registering on our network and by participating on the contests on our platform, you will be able to showcase your talent to the brands, resulting in rewards for the best content and be recognized by our Global Production Team to become PRO filmmaker.",
+            "location": {
+            "street": "Via dei Faggi 121",
+            "city": "Rome",
+            "state": "",
+            "country": "Italy",
+            "zip": "00172",
+            "latitude": 41.884214492759,
+            "longitude": 12.567388566195
+            },
+            "phone": "0664814690",
+            "cover": {
+            "cover_id": 1423334911289316,
+            "source": "https://www.userfarm.com/global/img/bg-about-us.jpg",
+            "offset_y": 0,
+            "offset_x": 0
+            },
+            "items":[
+                     {
+                     "name": "Fastweb",
+                     "message": "Internet per volare",
+                     "picture":"https://cdn2.userfarm.com/call/0/441/logo/full/logo.jpg",
+                     
+                     "link":"https://www.userfarm.com/us/call/internet-per-volare/441/description"
+                     },
+                     {
+                     "name": "Fernet Branca",
+                     "message": "Looking for the new Great Gatsby",
+                     "picture":"https://cdn3.userfarm.com/call/0/461/logo/full/logo.jpg",
+                     
+                     "link":"https://www.userfarm.com/us/call/looking-for-the-new-great-gatsby/461/description"
+                     },
+                     {
+                     "name": "Tetes Brulees",
+                     "message": "€ 10.000",
+                     "picture":"https://cdn3.userfarm.com/call/0/438/logo/full/logo.jpg"
+                     },
+                     {
+                     "name": "Barilla",
+                     "message": "Love life, love pasta: in your own way!",
+                     "picture":"https://cdn4.userfarm.com/call/0/394/logo/full/logo.jpg",
+                     "link":"https://www.userfarm.com/us/call/love-life-love-pasta-in-your-own-way/394/description"
+                     },
+                     {
+                     "name": "iDBus",
+                     "message": "The best iD to travel",
+                     "picture":"https://cdn1.userfarm.com/call/0/447/logo/full/logo.jpg",
+                     
+                     "link":"https://www.userfarm.com/us/call/idbus-the-best-iD-to-travel/447/description"
+                     }
+                     ]
+            
+            },
+      {
+         "id": "131969453521247",
+         "name": "About Us",
+            "category": "Video Crowdsourcing",
+            "description":"Some Key facts about video crowd sourcing in 2011 (growth, revenue inc, etc.)",
+         "location": {
+            "street": "Via della Costituente 18/22",
+            "city": "Grottaferrata",
+            "state": "",
+            "country": "Italy",
+            "zip": "00046",
+            "latitude": 41.7842569061,
+            "longitude": 12.6763967831
+         },
+            "cover": {
+            "cover_id": 1423334911289316,
+            "source": "https://www.userfarm.com/global/img/video-crowdsourcing.jpg",
+            "offset_y": 0,
+            "offset_x": 0
+            },
+         "phone": "069415084",
+         "background-color":"#202020",
+         "items":[
+                                    {
+                  "name": "1",
+                  "message": "In 2011, the term “crowdsourcing” was officially added to the Merriam-webster dictionary.",
+                  "picture":"",
+                  
+                  "link":"https://www.userfarm.com/us/call/menicon-lenses/453/description"
+                  },
+                  {
+                  "name": "2",
+                  "message": "That same term was made up by Jeff Howe, combining the words “crowd” and “outsourcing”.",
+                  "picture":""
+                  },
+                  {
+                  "name": "3",
+                  "message": "There are over 34,000 pages dedicated to video crowdsourcing on Google.",
+                  "picture":"",
+                  
+                  "link":"https://www.userfarm.com/us/call/love-life-love-pasta-in-your-own-way/394/description"
+                  },
+                  {
+                  "name": "4",
+                  "message": "66% of crowdsourcing customers tend to be start-ups or small businesses.",
+                  "picture":"",
+                  
+                  "link":"https://www.userfarm.com/us/call/idbus-the-best-iD-to-travel/447/description"
+                  },
+                  {
+                  "name": "5",
+                  "message": "Userfarm has over 46,000 Videomakers wanting to participate in Video crowdsourcing campaigns.",
+                  "picture":"",
+                  
+                  "link":"https://www.userfarm.com/us/call/idbus-the-best-iD-to-travel/447/description"
+                  },
+                  {
+                  "name": "6",
+                  "message": "Only 18% of traditional video advertising brings a positive ROI.",
+                  "picture":"",
+                  
+                  "link":"https://www.userfarm.com/us/call/idbus-the-best-iD-to-travel/447/description"
+                  },
+                  {
+                  "name": "7",
+                  "message": "User generated video content is among the most distributed and shared online.",
+                  "picture":"",
+                  
+                  "link":"https://www.userfarm.com/us/call/idbus-the-best-iD-to-travel/447/description"
+                  }
+           ]
+         
+            },
+        {
+            "template":"map",
+            "id": "131969453521247",
+            "name": "About Us",
+            "category": "Video Crowdsourcing",
+            "description":"Some Key facts about video crowd sourcing in 2011 (growth, revenue inc, etc.)",
+            "location": {
+            "street": "Via della Costituente 18/22",
+            "city": "Grottaferrata",
+            "state": "",
+            "country": "Italy",
+            "zip": "00046",
+            "latitude": 41.7842569061,
+            "longitude": 12.6763967831
+            },
+            "cover": {
+            "cover_id": 1423334911289316,
+            "source": "https://www.userfarm.com/global/img/video-crowdsourcing.jpg",
+            "offset_y": 50,
+            "offset_x": 0
+            },
+            "phone": "069415084",
+            "background-color":"#202020",
+            "items":[
+                     {
+                     "name": "1",
+                     "message": "In 2011, the term “crowdsourcing” was officially added to the Merriam-webster dictionary.",
+                     "picture":"",
+                     
+                     "link":"https://www.userfarm.com/us/call/menicon-lenses/453/description"
+                     },
+                     {
+                     "name": "2",
+                     "message": "That same term was made up by Jeff Howe, combining the words “crowd” and “outsourcing”.",
+                     "picture":""
+                     },
+                     {
+                     "name": "3",
+                     "message": "There are over 34,000 pages dedicated to video crowdsourcing on Google.",
+                     "picture":"",
+                     
+                     "link":"https://www.userfarm.com/us/call/love-life-love-pasta-in-your-own-way/394/description"
+                     },
+                     {
+                     "name": "4",
+                     "message": "66% of crowdsourcing customers tend to be start-ups or small businesses.",
+                     "picture":"",
+                     
+                     "link":"https://www.userfarm.com/us/call/idbus-the-best-iD-to-travel/447/description"
+                     },
+                     {
+                     "name": "5",
+                     "message": "Userfarm has over 46,000 Videomakers wanting to participate in Video crowdsourcing campaigns.",
+                     "picture":"",
+                     
+                     "link":"https://www.userfarm.com/us/call/idbus-the-best-iD-to-travel/447/description"
+                     },
+                     {
+                     "name": "6",
+                     "message": "Only 18% of traditional video advertising brings a positive ROI.",
+                     "picture":"",
+                     
+                     "link":"https://www.userfarm.com/us/call/idbus-the-best-iD-to-travel/447/description"
+                     },
+                     {
+                     "name": "7",
+                     "message": "User generated video content is among the most distributed and shared online.",
+                     "picture":"",
+                     
+                     "link":"https://www.userfarm.com/us/call/idbus-the-best-iD-to-travel/447/description"
+                     }
+                     ]
+            
+            }
+
+            
+   ]
+}

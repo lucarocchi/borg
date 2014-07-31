@@ -1,0 +1,160 @@
+{
+    "facebookx": {
+        "appid": "204264309603362",
+        "pageid": "168939929818827",
+        "permissions": ""
+    },
+    "location": {
+        "street": "Via dei Faggi 121",
+        "city": "Rome",
+        "state": "",
+        "country": "Italy",
+        "zip": "00172",
+        "latitude": 41.884214492759,
+        "longitude": 12.567388566195
+    },
+    "data": [
+             {
+             "id": "1422091914746949",
+             "logo": "https://www.barillafactory.com/global/img/barilla/logo-barilla-factory.png",
+             
+             "category": "LOVE LIFE, LOVE PASTA: IN YOUR OWN WAY!",
+             "description":"We all are special and unique combinations of different ingredients.\nEverybody loves pasta in their own way and pasta loves everybody in the same way.",
+             "phone": "0664814690",
+             "cover": {
+             "cover_id": 1423334911289316,
+             "source": "https://cdn1.userfarm.com/call/0/394/background/custom_bg_image.jpg",
+             "offset_y": 0,
+             "offset_x": 0
+             },
+             "background-color":"#242753",
+             "items":[
+                      
+                      {
+                      "name": "Brief",
+                      "background-color":"#242753",
+                      "text-color":"#ffffff",
+                      "message": "Love life, love pasta: in your own way!\n€ 40.000",
+                      "picture":"https://www.barillafactory.com/global/img/barilla/brief-icon.png",
+                      "link":"https://www.barillafactory.com/us/call/love-life-love-pasta-in-your-own-way/394/brief"
+                      },
+                      {
+                      "name": "Register",
+                      "background-color":"#242753",
+                      "text-color":"#ffffff",
+                      "message": "Love life, love pasta: in your own way!\n€ 40.000",
+                      "picture":"https://www.barillafactory.com/global/img/barilla/icon-register-upload-hp.png",
+                       "link":"https://www.barillafactory.com/us/registration"
+                      },
+                      {
+                      "name": "Awards",
+                      "background-color":"#242753",
+                      "text-color":"#ffffff",
+                      "message": "Love life, love pasta: in your own way!\n€ 40.000",
+                      "picture":"https://www.barillafactory.com/global/img/barilla/icon-awards-hp.png",
+                      
+                      "link":"https://www.barillafactory.com/us/call/love-life-love-pasta-in-your-own-way/394/awards"
+                      }
+                      ]
+             },
+             
+             
+             {
+             "id": "1422091914746949",
+             "logo": "https://www.barillafactory.com/global/img/barilla/logo-barilla-factory.png",
+             "category": "MI PIACE ESSERE UN SUGO BARILLA",
+             "description":"Welcome to the Barilla Factory! We need your creative skills. Browse through the content, or select a call and... go!",
+             "phone": "0664814690",
+             "cover": {
+             "cover_id": 1423334911289316,
+             "source": "https://cdn2.userfarm.com/call/0/275/background/custom_bg_image.jpg",
+             "offset_y": 0,
+             "offset_x": 0
+             },
+             "background-color":"#242753",
+             "items":[
+                      
+                      {
+                      "name": "Brief",
+                      "background-color":"#242753",
+                      "text-color":"#ffffff",
+                      "message": "Barilla è tra i primi gruppi alimentari italiani famosa nel mondo grazie alla costante attenzione nei confronti della qualità.",
+                      "picture":"https://www.barillafactory.com/global/img/barilla/brief-icon.png",
+                      "link":"https://www.barillafactory.com/us/call/mi-piace-essere-un-sugo-barilla/275/brief"
+                      },
+                      {
+                      "name": "Register",
+                      "background-color":"#242753",
+                      "text-color":"#ffffff",
+                      "message": "Tra le tante specialità di casa Barilla ci sono sicuramente i sughi pronti, preparati con ingredienti semplici e genuini.",
+                      "picture":"https://www.barillafactory.com/global/img/barilla/icon-register-upload-hp.png",
+                      "link":"https://www.barillafactory.com/us/registration"
+                      },
+                      {
+                      "name": "Awards",
+                      "background-color":"#242753",
+                      "text-color":"#ffffff",
+                      "message": "Vi chiediamo di realizzare un video in cui uno dei sughi Barilla (o anche più di uno insieme) si racconta in modo creativo, metaforico e sorprendente, rispondendo alla domanda: “Perché mi piace essere un sugo Barilla?”",
+                      "picture":"https://www.barillafactory.com/global/img/barilla/icon-awards-hp.png",
+                      
+                      "link":"https://www.barillafactory.com/us/call/mi-piace-essere-un-sugo-barilla/275/awards"
+                      }
+                      ]
+             },
+             
+             {
+             "id": "1422091914746949",
+             "logo": "https://www.barillafactory.com/global/img/barilla/logo-barilla-factory.png",
+             "category": "Creative",
+             "description":"Discover the content produced by our crowd - watch, comment and, if you like, share them with your friends!",
+             "background-color":"#242753",
+             "items":[
+                      {
+                      "name": "La scoperta della semplicità",
+                      "message": "Art Direction: Giuseppe Zizza, Chiara Tomati CGI: Giuseppe Zizza",
+                      "picture":"https://cdn1.userfarm.com/user/82/41257/video/43626/thumb/BIG/41257_43626_la-scoperta-della-semplicit.jpg",
+                      "iconmode":"fill",
+                      
+                      "link":"https://www.barillafactory.com/us/call/mi-piace-essere-un-sugo-barilla/275/content/la-scoperta-della-semplicit/43626"
+                      },
+                      {
+                      "name": "Concentrato di magia",
+                      "message": "Una casa vuota. Un sugo al basilico abbandonato sulla tavola. Due pupazzi coraggiosi e affamati. Cosa succederà? La magia si scatena a tavola...",
+                      "picture":"https://cdn2.userfarm.com/user/84/42132/video/43732/thumb/BIG/42132_43732_concentrato-di-magia.jpg",
+                      "iconmode":"fill",
+                      "link":"https://www.barillafactory.com/us/call/mi-piace-essere-un-sugo-barilla/275/content/concentrato-di-magia/43732"
+                      },
+                      {
+                      "name": "Come un Sugo",
+                      "message": "Vuoi essere quello che gli altri si aspettano o preferisci essere te stesso? IDEAZIONE e REGIA: Paolo Geremei FOTOGRAFIA: Carlo Rinaldi ",
+                      "picture":"https://cdn3.userfarm.com/user/84/42123/video/43717/thumb/BIG/42123_43717_come-un-sugo.jpg",
+                      "iconmode":"fill",
+                      "link":"https://www.barillafactory.com/us/call/mi-piace-essere-un-sugo-barilla/275/content/come-un-sugo/43717"
+                      },
+                      {
+                      "name": "The Italian Choice",
+                      "message": "Produzione: B35FILM Regìa: Giordano Borghi Riprese: Giacomo Bruno DOP: Alessandro Vezzani",
+                      "picture":"https://cdn4.userfarm.com/user/82/41019/video/43607/thumb/BIG/41019_43607_the-italian-choice.jpg",
+                      "iconmode":"fill",
+                      "link":"https://www.barillafactory.com/us/call/mi-piace-essere-un-sugo-barilla/275/content/the-italian-choice/43607"
+                      },
+                      {
+                      "name": "Barilla Factory",
+                      "message": "Sugo Barilla e Pop-Art? Lontano da fornelli, stoviglie e massaie indaffarate, il Sugo Barilla diventa fonte di ispirazione ...",
+                      "picture":"https://cdn1.userfarm.com/user/81/40536/video/43601/thumb/BIG/40536_43601_barilla-factory.jpg",
+                      "iconmode":"fill",
+                      "link":"https://www.userfarm.com/us/content/orizzonti-di-gloria/71865#content-media"
+                      },
+                      {
+                      "name": "LET'S PASTA!",
+                      "message": "Le nuove tecnologie non soddisfano e non soddisferanno mai i gusti tradizionali italiani",
+                      "picture":"https://cdn2.userfarm.com/user/83/41699/video/43697/thumb/BIG/41699_43697_let-s-pasta.jpg",
+                      "iconmode":"fill",
+                      "link":"https://www.barillafactory.com/us/call/mi-piace-essere-un-sugo-barilla/275/content/let-s-pasta/43697"
+                      }
+                      ]
+             
+             }
+             
+             ]
+}
