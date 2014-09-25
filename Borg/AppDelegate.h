@@ -22,15 +22,19 @@
 @property (strong, nonatomic) NSString*fbToken;
 @property (strong, nonatomic) NSString*title;
 @property (strong, nonatomic) NSString*filename;
-@property (retain, nonatomic) IBOutlet NSMutableDictionary *json;
-@property (retain, nonatomic) IBOutlet NSMutableDictionary *fb;
-@property (retain, nonatomic) IBOutlet NSMutableArray *data;
-@property (retain, nonatomic) IBOutlet NSMutableArray *items;
-@property (retain, nonatomic) IBOutlet NSMutableDictionary *fbObjects;
+@property  bool opened;
+@property  NSInteger pageIndex;
+@property  NSInteger categoryIndex;
+@property (retain, nonatomic) NSMutableArray *categories;
+@property (retain, nonatomic) NSMutableDictionary *json;
+@property (retain, nonatomic) NSMutableDictionary *fb;
+@property (retain, nonatomic) NSMutableArray *data;
+@property (retain, nonatomic) NSMutableArray *alldata;
+@property (retain, nonatomic) NSMutableDictionary *fbObjects;
 @property (readonly) CMMotionManager *motionManager;
 
 - (UIColor *)colorFromHexString:(NSString *)hexString;
-- (float) getLabelHeight:(NSString*)s withFont:font andWidth:width;
+- (float) getLabelHeight:(NSString*)s withFont:font Size:(int)size  andWidth:(int)width;
 - (void)loginFacebook ;
 
 

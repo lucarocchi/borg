@@ -24,9 +24,10 @@
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
     self.json=[NSMutableDictionary dictionary];
+    self.alldata=[NSMutableArray array];
     self.data=[NSMutableArray array];
-    self.items=[NSMutableArray array];
-    
+    //self.items=[NSMutableArray array];
+    self.opened=false;
     self.fbObjects=[NSMutableDictionary dictionary];
     
     self.rootViewController=[RootViewController new];
@@ -35,12 +36,32 @@
     self.baseUrl=@"http://www.mobileborg.com/newapp/";
     //self.title=@"B-eat Digital Kitchen";
     //self.filename=@"beat";
-    //self.title=@"FREE UNDERGROUND TEKNO RADIO";
-    //self.filename=@"freeunderground";
+    //self.title=@"Terra e mare";
+    //self.filename=@"terraemare";
     self.title=@"Iquii";
     self.filename=@"iquii";
+    //self.title=@"Userfarm";
+    //self.filename=@"userfarm";
+    
+    //self.title=@"Userfarm";
+    //self.filename=@"ufglobal";
+    
+    //self.title=@"Freenapsy";
+    //self.filename=@"freenapsy";
+    //self.title=@"Pages";
+    //self.filename=@"pages";
+    
     self.window.backgroundColor = [UIColor blackColor];
     [self.window makeKeyAndVisible];
+    self.pageIndex=0;
+    self.categories=[NSMutableArray array];
+    self.categoryIndex=0;
+    //[FBLoginView class];
+    
+    //NSLog(@"fonts %@",[UIFont fontNamesForFamilyName:@"Helvetica Neue"]);
+    
+    //NSLog(@"FB logged in - token expiration: %@",[[FBSession activeSession] accessTokenData].expirationDate);
+
     return YES;
 }
 
@@ -90,15 +111,20 @@
     return [UIColor colorWithRed:((rgbValue & 0xFF0000) >> 16)/255.0 green:((rgbValue & 0xFF00) >> 8)/255.0 blue:(rgbValue & 0xFF)/255.0 alpha:1.0];
 }
 
-- (float) getLabelHeight:(NSString*)s withFont:font andWidth:width{
-    NSDictionary *attributes = @{NSFontAttributeName: font};
+- (float) getLabelHeight:(NSString*)s withFont:font Size:(int)size andWidth:(int)width{
+    //NSDictionary *attributes = @{NSFontAttributeName: font};
+    
     float deviceVersion   = [[[UIDevice currentDevice] systemVersion] floatValue];
+    NSMutableAttributedString*as= [[NSMutableAttributedString alloc] initWithString:s];
+    [as addAttribute:NSFontAttributeName value:[UIFont fontWithName:font size:size] range:NSMakeRange(0,s.length)];
+
     if (deviceVersion>=7.0){
         // NSString class method: boundingRectWithSize:options:attributes:context is
         // available only on ios7.0 sdk.
-        CGRect rect = [s boundingRectWithSize:CGSizeMake(300, MAXFLOAT)
+        
+
+        CGRect rect = [as boundingRectWithSize:CGSizeMake(width, MAXFLOAT)
                                       options:NSStringDrawingUsesLineFragmentOrigin
-                                   attributes:attributes
                                       context:nil];
         return rect.size.height;
     }else{
@@ -119,18 +145,33 @@
             openURL:(NSURL *)url
   sourceApplication:(NSString *)sourceApplication
          annotation:(id)annotation {
-    // attempt to extract a token from the url
-    return [FBAppCall handleOpenURL:url
-                  sourceApplication:sourceApplication
-                    fallbackHandler:^(FBAppCall *call) {
-                        NSLog(@"In fallback handler");
-                    }];
+    
+    // Call FBAppCall's handleOpenURL:sourceApplication to handle Facebook app responses
+    BOOL wasHandled = [FBAppCall handleOpenURL:url sourceApplication:sourceApplication];
+    
+    // You can add your app-specific url handling code here if needed
+    
+    return wasHandled;
 }
 
 - (void)loginFacebook {
     if (![SLComposeViewController isAvailableForServiceType:SLServiceTypeFacebook]) {
-        NSLog(@"Facebook account not available");
-        return;
+        //NSLog(@"Facebook account not available");
+        //[self.rootViewController addFBLoginView];
+        
+        if (FBSession.activeSession.state == FBSessionStateCreatedTokenLoaded) {
+            
+            // If there's one, just open the session silently, without showing the user the login UI
+            [FBSession openActiveSessionWithReadPermissions:@[@"public_profile"]
+                                               allowLoginUI:NO
+                                          completionHandler:^(FBSession *session, FBSessionState state, NSError *error) {
+                                              // Handler for session state changes
+                                              // This method will be called EACH time the session state changes,
+                                              // also for intermediate states and NOT just when the session open
+                                              [self sessionStateChanged:session state:state error:error];
+                                          }];
+            return;
+        }
     }
     
     AppDelegate *app = (AppDelegate *)[[UIApplication sharedApplication] delegate];
@@ -139,7 +180,7 @@
     
     ACAccountType *fbActType = [_accountStore accountTypeWithAccountTypeIdentifier:ACAccountTypeIdentifierFacebook];
     
-#define FB_KEY "204264309603362"
+    #define FB_KEY "204264309603362"
     
     NSDictionary *options = [[NSDictionary alloc] initWithObjectsAndKeys:
                              @FB_KEY,(NSString *)ACFacebookAppIdKey,
@@ -156,13 +197,17 @@
                 ACAccount*account=[accounts lastObject];
                 ACAccountCredential *ac=[account credential];
                 app.fbToken=[ac oauthToken];
-                NSLog(@"Facebook Login token %@ ",app.fbToken);
-                [self.rootViewController loadFBPosts];
+                //NSLog(@"Facebook Login token %@ ",app.fbToken);
+                NSString*fbid=[app.fb objectForKey:@"pageid"];
+
+                [self.rootViewController loadFBId:fbid];
+                
             });
             
             
         } else {
-            NSLog(@"Facebook Login not granted ");
+            //NSLog(@"Facebook Login not granted ");
+            [self.rootViewController addFBLoginView];
         }
     }
      ];
@@ -170,5 +215,72 @@
     
 }
 
+// This method will handle ALL the session state changes in the app
+- (void)sessionStateChanged:(FBSession *)session state:(FBSessionState) state error:(NSError *)error
+{
+    // If the session was opened successfully
+    if (!error && state == FBSessionStateOpen){
+        //NSLog(@"Session opened");
+        // Show the user the logged-in UI
+        //[self userLoggedIn];
+        AppDelegate *app = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+        //NSLog(@"Access Token %@", [[FBSession.activeSession accessTokenData] accessToken]);
+        
+        app.fbToken=[[FBSession.activeSession accessTokenData] accessToken];
+        //NSLog(@"Facebook Login token %@ ",app.fbToken);
+        NSString*fbid=[app.fb objectForKey:@"pageid"];
+        
+        [self.rootViewController loadFBId:fbid];
+        return;
+    }
+    if (state == FBSessionStateClosed || state == FBSessionStateClosedLoginFailed){
+        // If the session is closed
+        //NSLog(@"Session closed");
+        [self.rootViewController addFBLoginView];
+        // Show the user the logged-out UI
+        //[self userLoggedOut];
+    }
+    
+    // Handle errors
+    if (error){
+        NSLog(@"Error");
+        NSString *alertText;
+        NSString *alertTitle;
+        // If the error requires people using an app to make an action outside of the app in order to recover
+        if ([FBErrorUtility shouldNotifyUserForError:error] == YES){
+            alertTitle = @"Something went wrong";
+            alertText = [FBErrorUtility userMessageForError:error];
+            //[self showMessage:alertText withTitle:alertTitle];
+        } else {
+            
+            // If the user cancelled login, do nothing
+            if ([FBErrorUtility errorCategoryForError:error] == FBErrorCategoryUserCancelled) {
+                NSLog(@"User cancelled login");
+                
+                // Handle session closures that happen outside of the app
+            } else if ([FBErrorUtility errorCategoryForError:error] == FBErrorCategoryAuthenticationReopenSession){
+                alertTitle = @"Session Error";
+                alertText = @"Your current session is no longer valid. Please log in again.";
+                //[self showMessage:alertText withTitle:alertTitle];
+                
+                // Here we will handle all other errors with a generic error message.
+                // We recommend you check our Handling Errors guide for more information
+                // https://developers.facebook.com/docs/ios/errors/
+            } else {
+                //Get more error information from the error
+                NSDictionary *errorInformation = [[[error.userInfo objectForKey:@"com.facebook.sdk:ParsedJSONResponseKey"] objectForKey:@"body"] objectForKey:@"error"];
+                
+                // Show the user an error message
+                alertTitle = @"Something went wrong";
+                alertText = [NSString stringWithFormat:@"Please retry. \n\n If the problem persists contact us and mention this error code: %@", [errorInformation objectForKey:@"message"]];
+                //[self showMessage:alertText withTitle:alertTitle];
+            }
+        }
+        // Clear this token
+        [FBSession.activeSession closeAndClearTokenInformation];
+        // Show the user the logged-out UI
+        //[self userLoggedOut];
+    }
+}
 
 @end

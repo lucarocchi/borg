@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="5056" systemVersion="13D65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="5056" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none">
     <dependencies>
-        <deployment defaultVersion="1536" identifier="iOS"/>
+        <deployment defaultVersion="1792" identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
     <objects>
@@ -9,6 +9,7 @@
             <connections>
                 <outlet property="buttonMap" destination="dM3-Xn-UXL" id="ukK-dP-Dgy"/>
                 <outlet property="buttonPeople" destination="yXt-0f-jLH" id="yHj-yp-iUJ"/>
+                <outlet property="categoryPicker" destination="rhS-Yp-dMc" id="V2w-aR-OWn"/>
                 <outlet property="collectionView" destination="fRV-eE-pii" id="y4Y-e4-sen"/>
                 <outlet property="pageControl" destination="uTD-W1-dfu" id="YbB-nh-jOg"/>
                 <outlet property="sectionCollectionView" destination="VCZ-Qm-AMr" id="9wh-VH-fmM"/>
@@ -24,7 +25,7 @@
                     <rect key="frame" x="0.0" y="0.0" width="320" height="320"/>
                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                     <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="g4k-QO-3ad">
-                        <size key="itemSize" width="320" height="320"/>
+                        <size key="itemSize" width="320" height="318"/>
                         <size key="headerReferenceSize" width="0.0" height="0.0"/>
                         <size key="footerReferenceSize" width="0.0" height="0.0"/>
                         <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
@@ -41,18 +42,18 @@
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="yXt-0f-jLH">
                     <rect key="frame" x="252" y="0.0" width="60" height="60"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <state key="normal" image="112-group.png">
+                    <state key="normal" image="399-list1.png">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                     <connections>
                         <action selector="loginEvent:" destination="-1" eventType="touchUpInside" id="zms-7I-DqV"/>
                     </connections>
                 </button>
-                <collectionView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceHorizontal="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" minimumZoomScale="0.0" maximumZoomScale="0.0" dataMode="none" id="fRV-eE-pii">
+                <collectionView multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceHorizontal="YES" showsVerticalScrollIndicator="NO" minimumZoomScale="0.0" maximumZoomScale="0.0" dataMode="none" id="fRV-eE-pii">
                     <rect key="frame" x="0.0" y="320" width="320" height="248"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="DgK-5X-IQc">
-                        <size key="itemSize" width="50" height="50"/>
+                    <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="1" minimumInteritemSpacing="1" id="JPp-cq-NPJ">
+                        <size key="itemSize" width="138" height="246"/>
                         <size key="headerReferenceSize" width="0.0" height="0.0"/>
                         <size key="footerReferenceSize" width="0.0" height="0.0"/>
                         <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
@@ -63,13 +64,17 @@
                     <rect key="frame" x="65" y="266" width="189" height="37"/>
                     <autoresizingMask key="autoresizingMask" flexibleMinY="YES"/>
                 </pageControl>
+                <pickerView hidden="YES" contentMode="scaleToFill" id="rhS-Yp-dMc">
+                    <rect key="frame" x="0.0" y="347" width="320" height="162"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                </pickerView>
             </subviews>
             <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
         </view>
     </objects>
     <resources>
-        <image name="112-group.png" width="32" height="21"/>
+        <image name="399-list1.png" width="19" height="15"/>
         <image name="401-globe.png" width="28" height="28"/>
     </resources>
 </document>

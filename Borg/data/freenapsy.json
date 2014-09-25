@@ -10,7 +10,7 @@
     },
    "data": [
             {
-            "id": "1422091914746949",
+            
             "logo": "http://www.mobileborg.com/newapp/freenapsy/logofn.jpg",
             "name": "",
             "category": "About",
@@ -21,26 +21,26 @@
             "items":[
                     
                      {
-                     "name": "Mobile Advertising",
+                     "caption": "Mobile Advertising",
                      "message": "The platforms Android, iOS, Windows Mobile and their evolutions are carefully followed to ensure the best marketing strategy for the client.",
                      "picture":"http://www.mobileborg.com/newapp/freenapsy/mobieadv.jpg",
                      "link":"http://www.freenapsy.com/index.php/en/mobile-advertising"
                      },
                      {
-                     "name": "Mobile Development",
+                     "caption": "Mobile Development",
                      "message": "Our company provides comprehensive services for the development of mobile applications across all major platforms .",
                      "picture":"http://www.mobileborg.com/newapp/freenapsy/mobiledev.jpg",
                      "link":"http://www.freenapsy.com/index.php/en/mobile-development"
                      },
                      {
-                     "name": "Apps Incubator",
+                     "caption": "Apps Incubator",
                      "message": "Freenapsy can help you develop your idea, with a professional and expert advice at all stages, from the initial idea to the final product promotion.",
                      "picture":"http://www.mobileborg.com/newapp/freenapsy/appinc.jpg",
                      
                      "link":"http://www.freenapsy.com/index.php/en/app-incubator"
                      },
                      {
-                     "name": "eCommerce Solutions",
+                     "caption": "eCommerce Solutions",
                      "message": "Turn to professionals for advice and strategic technological means used to start, strengthen or develop your own e-commerce, B2B and B2C.",
                      "picture":"http://www.mobileborg.com/newapp/freenapsy/ecomm.jpg",
                      "link":"http://www.freenapsy.com/index.php/en/ecommerce"
@@ -48,7 +48,6 @@
                  ]
             },
             {
-            "id": "1422091914746949",
             "logo": "http://www.mobileborg.com/newapp/freenapsy/logofn.jpg",
             
             "name": "",
@@ -58,27 +57,27 @@
 
             "items":[
                      {
-                     "name": "Apps Incubator",
+                     "caption": "Apps Incubator",
                      "message": "Freenapsy can help you develop your idea, with a professional and expert advice at all stages, from the initial idea to the final product promotion.",
                      "picture":"http://www.mobileborg.com/newapp/freenapsy/appinc.jpg",
                      
                      "link":"http://www.freenapsy.com/index.php/en/app-incubator"
                      },
                      {
-                     "name": "eCommerce Solutions",
+                     "caption": "eCommerce Solutions",
                      "message": "Turn to professionals for advice and strategic technological means used to start, strengthen or develop your own e-commerce, B2B and B2C.",
                      "picture":"http://www.mobileborg.com/newapp/freenapsy/ecomm.jpg",
                      "link":"http://www.freenapsy.com/index.php/en/ecommerce"
                      },
                      
                      {
-                     "name": "Mobile Advertising",
+                     "caption": "Mobile Advertising",
                      "message": "The platforms Android, iOS, Windows Mobile and their evolutions are carefully followed to ensure the best marketing strategy for the client.",
                      "picture":"http://www.mobileborg.com/newapp/freenapsy/mobieadv.jpg",
                      "link":"http://www.freenapsy.com/index.php/en/mobile-advertising"
                      },
                      {
-                     "name": "Mobile Development",
+                     "caption": "Mobile Development",
                      "message": "Our company provides comprehensive services for the development of mobile applications across all major platforms .",
                      "picture":"http://www.mobileborg.com/newapp/freenapsy/mobiledev.jpg",
                      "link":"http://www.freenapsy.com/index.php/en/mobile-development"
@@ -86,7 +85,6 @@
                      ]
             },
             {
-            "id": "1422091914746949",
             "logo": "http://www.mobileborg.com/newapp/freenapsy/logofn.jpg",
             
             "name": "",
@@ -96,21 +94,21 @@
             
             "items":[
                      {
-                     "name": "Sviluppatore Mobile Senior",
+                     "caption": "Sviluppatore Mobile Senior",
                      "message": "Ricerchiamo sviluppatori Android (JAVA) e IOS (ObjectiveC) per attività di progettazione e sviluppo di soluzioni basate su Android e IOS per Smartphone e Tablet.",
                      "picture":"",
                      "background-color":"#ffffff",
                      "link":""
                      },
                      {
-                     "name": "Sviluppatore Mobile Junior",
+                     "caption": "Sviluppatore Mobile Junior",
                      "message": "Ricerchiamo sviluppatori Android (JAVA) e IOS (ObjectiveC) per attività di progettazione e sviluppo di soluzioni basate su Android e IOS per Smartphone e Tablet.",
                      "picture":"",
                      "background-color":"#ffffff",
                      "link":""
                      },
                      {
-                     "name": "Sviluppatore Web PHP",
+                     "caption": "Sviluppatore Web PHP",
                      "message": "Ricerchiamo uno sviluppatore Web PHP da inserire nel proprio team di sviluppo in Roma. Il lavoro sarà in loco, FULL TIME.",
                      "picture":"",
                      "background-color":"#ffffff",

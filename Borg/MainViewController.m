@@ -8,18 +8,24 @@
 
 #import "MainViewController.h"
 #import "AppDelegate.h"
+#import "Pop/Pop.h"
 #import "AFNetworking.h"
-#import "UIImageView+WebCache.h"
+#import "UIImageView+AFNetworking.h"
 #import "GridCell.h"
 #import "SectionDelegate.h"
 #import "GridDelegate.h"
 #import "AnnotationView.h"
 #import "MapItem.h"
-#import "Pop/Pop.h"
+#import "SmallLayout.h"
+#import "AFCollectionViewFlowLargeLayout.h"
+#import "AFCollectionViewFlowSmallLayout.h"
 
 
 @interface MainViewController ()<POPAnimationDelegate>{
-    bool sizing;
+    bool gestureStarted;
+    //bool gestureEnded;
+    bool transitionStarted;
+    //bool transitionEnded;
     double frameTimestamp;
     CGRect frameStartRect;
     CGRect frameEndRect;
@@ -50,7 +56,6 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
-    sizing=false;
     UINib *sectionNib = [UINib nibWithNibName:@"SectionCell" bundle:nil];
     [self.sectionCollectionView registerNib:sectionNib forCellWithReuseIdentifier:@"SectionCell"];
     
@@ -65,7 +70,7 @@
     CGRect screenRect = [[UIScreen mainScreen] bounds];
     float sh=screenRect.size.height;
     float sw=screenRect.size.width;
-    CGRect f0=CGRectMake(0,0, sw,sh-SUBSECTION_HEIGHT);
+    CGRect f0=CGRectMake(0,0, sw,sh-SUBSECTION_HEIGHT-2);
     self.sectionCollectionView.frame=f0;
     CGRect f1=CGRectMake(0,sh-SUBSECTION_HEIGHT, sw,SUBSECTION_HEIGHT);
     self.collectionView.frame=f1;
@@ -90,21 +95,78 @@
     self.sectionCollectionView.dataSource=self.sectionDelegate;
     self.collectionView.delegate=self.gridDelegate;
     self.collectionView.dataSource=self.gridDelegate;
+    //self.collectionView.delegate=self;
+    //self.collectionView.dataSource=self;
+    
+    //[self.smallLayout invalidateLayout];
+    //[self.collectionView setCollectionViewLayout:self.smallLayout animated:YES];
+
+    self.smallLayout = [[AFCollectionViewFlowSmallLayout alloc] init];
+    self.largeLayout = [[AFCollectionViewFlowLargeLayout alloc] init];
+    self.transitionLayout=[[UICollectionViewTransitionLayout alloc] initWithCurrentLayout:self.smallLayout nextLayout:self.largeLayout];
+    
+    //self.smallLayout=[AFCollectionViewFlowSmallLayout new];
+    self.collectionView.collectionViewLayout=self.smallLayout;
+    //CGFloat w = CGRectGetWidth(self.collectionView.bounds)-SUBSECTION_WIDTH;
+    //[self.collectionView setContentInset: UIEdgeInsetsMake(0, w/2,  0,w/2 )];
+
     //[self.collectionView setCollectionViewLayout:[[UICollectionViewFlowLayout alloc] init] animated:YES];
+
+    //self.categoryPicker=[[UIPickerView alloc] init];
+    self.categoryPicker.delegate=self;
+    self.categoryPicker.dataSource=self;
+    [[UIPickerView appearance] setBackgroundColor:[UIColor colorWithWhite:0.6 alpha:.8]];
     
-    NSLog(@"sectionCollectionView %@",NSStringFromCGPoint(self.sectionCollectionView.center)) ;
-    NSLog(@"collectionView %@",NSStringFromCGPoint(self.collectionView.center)) ;
+    //NSLog(@"sectionCollectionView %@",NSStringFromCGPoint(self.sectionCollectionView.center)) ;
+    //NSLog(@"collectionView %@",NSStringFromCGPoint(self.collectionView.center)) ;
     
-    
+    gestureStarted=false;
+    //gestureEnded=false;
+    transitionStarted=false;
     
     [self.buttonMap addTarget:self action:@selector(touchUpInsideMap:) forControlEvents:UIControlEventTouchUpInside];
     [self.buttonPeople addTarget:self action:@selector(touchUpInsidePeople:) forControlEvents:UIControlEventTouchUpInside];
-    [self addDragView];
+    //[self addDragView];
     [self setData];
     //self.collectionView.layer.anchorPoint=CGPointMake(1,0);
     //[self.collectionView addObserver:self forKeyPath:@"frame" options:0 context:nil];
 	//[self startMotionDetect];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(onPostsLoaded:)
+                                                 name:@"onPostsLoaded"
+                                               object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(onCategoriesLoaded:)
+                                                 name:@"onCategoriesLoaded"
+                                               object:nil];
+
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"onChangePage"
+                                                        object:self
+                                                userInfo:nil];
+    
+    AppDelegate *app = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+    [self.buttonPeople setHidden:[app.categories count]==0];
+
    
+}
+
+-(void) onPostsLoaded: (NSNotification *)aNotification {
+    //AppDelegate *app = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+    //NSMutableDictionary*d=[app.data objectAtIndex:app.pageIndex];
+    //NSLog(@"onPostsLoaded %d", app.pageIndex);
+    [self.collectionView reloadData];
+}
+
+-(void) onCategoriesLoaded: (NSNotification *)aNotification {
+    //AppDelegate *app = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+    //NSMutableDictionary*d=[app.data objectAtIndex:app.pageIndex];
+    //NSLog(@"onCategoriesLoaded %d", app.categoryIndex);
+    [self.sectionCollectionView reloadData];
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"onChangePage"
+                                                        object:self
+                                                      userInfo:nil];
+    
 }
 
 - (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context
@@ -122,6 +184,7 @@
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1.5f * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
     });
 }
+
 - (void)touchUpInsidePeople:(UIImageView *)image
 {
     [self shakePeople];
@@ -180,10 +243,6 @@
 }
 
 
-- (BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldRecognizeSimultaneouslyWithGestureRecognizer:(UIGestureRecognizer *)otherGestureRecognizer{
-    return !sizing;
-
-}
 
 
 #pragma mark - Private Instance methods
@@ -237,59 +296,81 @@
         self.collectionView.frame=frameEndRect;
         [self.displayLink invalidate];
         self.displayLink=nil;
-        sizing=false;
-        
     }
     //[self.collectionView reloadData];
     //[self.collectionView setNeedsDisplay];
 }
 
-//http://stackoverflow.com/questions/13780153/uicollectionview-animate-cell-size-change-on-selection
+//gesture
+- (BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldRecognizeSimultaneouslyWithGestureRecognizer:(UIGestureRecognizer *)otherGestureRecognizer{
+    return !transitionStarted;
+}
 
 - (void)handlePan:(UIPanGestureRecognizer *)recognizer
 {
-    //CGPoint center0=CGPointMake(recognizer.view.center.x, recognizer.view.center.y);
     CGPoint translation = [recognizer translationInView:self.view];
-    float ah=recognizer.view.frame.size.height;
-    float sh=self.view.window.screen.bounds.size.height;
-    float sw=self.view.window.screen.bounds.size.width;
+    CGPoint velocity = [recognizer velocityInView: self.view];
     float dy=-translation.y;
-    float dx=translation.x;
-    float nh=ah +dy;
-    if (nh<SUBSECTION_HEIGHT){
-        //NSLog(@"nh<SUBSECTION_HEIGHT") ;
-        nh=SUBSECTION_HEIGHT;
-        //return;
-    }
-    if (!sizing){
-        if (dx==0 && dy!=0 ){
-            sizing=true;
-        }else{
-            [recognizer setTranslation:CGPointMake(0, 0) inView:self.view];
-            return;
+    float vy=velocity.y;
+    //float dx=translation.x;
+    //NSLog(@"dy %f vy %f",dy,vy);
+    bool maximized=[self isGridMaximized];
+    bool allowed = ((maximized && dy<0) || (!maximized && dy>0)) && abs(vy)<100;
+    UICollectionViewLayout*newLayout=maximized?self.smallLayout:self.largeLayout;
+    float yOffset=10;
+    if (abs(dy)>yOffset && abs(dy)<=100 && allowed){
+        if (gestureStarted && !transitionStarted){
+            if (maximized){
+                //[self gridRestore];
+            }
+            self.transitionLayout = [self.collectionView startInteractiveTransitionToCollectionViewLayout:newLayout completion:(UICollectionViewLayoutInteractiveTransitionCompletion)^(BOOL completed, BOOL finish){
+                [self gridUpdate];
+                NSLog(@"completed %d",completed);
+                NSLog(@"finish %d",finish);
+                
+            }];
+            //[self gridRestore];
+            transitionStarted=true;
+            NSLog(@"transitionStarted !!!!") ;
         }
     }
-    if (sizing){
-        float y0=sh-nh;
-        [recognizer setTranslation:CGPointMake(0, 0) inView:self.view];
-        CGRect frame=recognizer.view.frame;
-        frame.origin = CGPointMake(0,y0);
-        frame.size = CGSizeMake(sw,nh);
-        self.collectionView.frame=frame;
-        [self.collectionView.collectionViewLayout invalidateLayout];
-        if(recognizer.state == UIGestureRecognizerStateEnded) {
-            frameStartRect=self.collectionView.frame;
-            CGRect r = [[UIScreen mainScreen] bounds];
-            float sh=r.size.height;
-            if (dy<0 || frameStartRect.size.height<sh*.66){
-                [self gridRestore];
+    
+    if(recognizer.state == UIGestureRecognizerStateBegan) {
+        NSLog(@"UIGestureRecognizerStateBegan") ;
+        gestureStarted=true;
+    }
+    if (transitionStarted){
+        if ([self.transitionLayout respondsToSelector:@selector(transitionProgress)]){
+            self.transitionLayout.transitionProgress=(abs(dy)-yOffset)/100;
+            NSLog(@"transitionProgress...%f",self.transitionLayout.transitionProgress) ;
+        }else{
+            NSLog(@"transitionProgress!respondsToSelector...already canceled?") ;
+        }
+    }
+    if(recognizer.state == UIGestureRecognizerStateEnded) {
+        NSLog(@"UIGestureRecognizerStateEnded") ;
+        //[recognizer setTranslation:CGPointMake(0, 0) inView:recognizer.view];
+        gestureStarted=false;
+        if (transitionStarted==true){
+            if (self.transitionLayout.transitionProgress>0.49f){
+                 NSLog(@"finishInteractiveTransition") ;
+                [self.collectionView finishInteractiveTransition];
             }else{
-                [self gridMaximize];
+                NSLog(@"cancelInteractiveTransition") ;
+                [self.collectionView cancelInteractiveTransition];
             }
+            transitionStarted=false;
         }
     }
 }
 
+-(void) gridUpdate{
+    if ([self isGridMaximized]){
+        [self gridMaximize];
+    }else{
+        [self gridRestore];
+    }
+}
 -(void) gridToggle{
     if ([self isGridMaximized]){
         [self gridRestore];
@@ -299,27 +380,50 @@
 }
 
 -(bool) isGridMaximized{
-    CGRect screenRect = [[UIScreen mainScreen] bounds];
-    CGRect gridRect=self.collectionView.bounds;
-    return gridRect.size.height==screenRect.size.height;
+    return [self.collectionView.collectionViewLayout isKindOfClass:[AFCollectionViewFlowLargeLayout class]];
+    //CGRect screenRect = [[UIScreen mainScreen] bounds];
+    //CGRect gridRect=self.collectionView.bounds;
+    //return gridRect.size.height==screenRect.size.height;
 }
 
 -(void) gridMaximize{
+    //CGRect screenRect = [[UIScreen mainScreen] bounds];
+    //float sh=screenRect.size.height;
+    //float sw=screenRect.size.width;
+    //float dy2=SUBSECTION_HEIGHT/2;
+    //CGRect f0=CGRectMake(0,0, sw, (sh-dy2)*2);
+    //CGRect f1=CGRectMake(0,sh-SUBSECTION_HEIGHT, sw,SUBSECTION_HEIGHT);
+    //[self.collectionView setFrame:f0];
+    [self.collectionView setPagingEnabled:YES];
+    [self.pageControl setHidden:YES];
+
+    /*
+    
     frameStartRect=self.collectionView.frame;
     frameEndRect = [[UIScreen mainScreen] bounds];
     self.collectionView.pagingEnabled=true;
-    [self startDisplay];
+    [self startDisplay];*/
 }
 
 -(void) gridRestore{
-    frameStartRect=self.collectionView.frame;
+    //CGRect screenRect = [[UIScreen mainScreen] bounds];
+    //float sh=screenRect.size.height;
+    //float sw=screenRect.size.width;
+    //float dy2=SUBSECTION_HEIGHT/2;
+    //CGRect f0=CGRectMake(0,0, sw, (sh-dy2)*2);
+    //CGRect f1=CGRectMake(0,sh-SUBSECTION_HEIGHT, sw,SUBSECTION_HEIGHT);
+    //[self.collectionView setFrame:f1];
+    [self.collectionView setPagingEnabled:NO];
+    [self.pageControl setHidden:NO];
+
+    /*frameStartRect=self.collectionView.frame;
     CGRect r = [[UIScreen mainScreen] bounds];
     float sh=r.size.height;
     r.origin.y=sh-SUBSECTION_HEIGHT;
     r.size.height=SUBSECTION_HEIGHT;
     frameEndRect=r;
     self.collectionView.pagingEnabled=false;
-    [self startDisplay];
+    [self startDisplay];*/
 }
 
 -(void) startDisplay{
@@ -359,7 +463,18 @@
 
 - (IBAction)loginEvent:(UIButton *)sender {
     AppDelegate *app = (AppDelegate *)[[UIApplication sharedApplication] delegate];
-    [app loginFacebook];
+    //[app loginFacebook];
+    if ([app.categories count]){
+        [self.categoryPicker setHidden:NO];
+        float pvHeight = self.categoryPicker.frame.size.height;
+        float y = 568 - (pvHeight); // the root view of view controller
+        [UIView animateWithDuration:0.5f delay:0 options:UIViewAnimationOptionCurveEaseInOut animations:^{
+            self.categoryPicker.frame = CGRectMake(0 , y, self.categoryPicker.frame.size.width, pvHeight);
+        } completion:nil];
+        
+        
+        [self.categoryPicker reloadAllComponents];
+    }
 
 }
 
@@ -419,15 +534,8 @@
     if ([view.annotation isKindOfClass:[MKUserLocation class]]){
         return ;
     }
-    MapItem *mitem = (MapItem *)view.annotation;
-    
-    //AppDelegate *app = (AppDelegate *)[[UIApplication sharedApplication] delegate];
-    /*ItemViewController*vc=[[ItemViewController alloc]init];
-    vc.data=[NSMutableDictionary dictionaryWithDictionary:scribbItem.data];
-    
-    vc.modalTransitionStyle = UIModalTransitionStyleFlipHorizontal;
-    [self presentViewController:vc animated:YES completion:nil];*/
-    
+    //MapItem *mitem = (MapItem *)view.annotation;
+     
 }
 
 - (void)startMotionDetect
@@ -463,5 +571,47 @@
     
     
 }
+//pickerview
+- (NSInteger)pickerView:(UIPickerView *)thePickerView numberOfRowsInComponent:(NSInteger)component {
+    AppDelegate *app = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+    /*if ([thePickerView isEqual:subCategoryPicker ]){
+        return [self.subcategories count];
+    }
+    if ([thePickerView isEqual:categoryPicker ]){
+        return [app.categories count];
+    }*/
+    return [app.categories count];
+}
 
+- (NSString *)pickerView:(UIPickerView *)thePickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component {
+    AppDelegate *app = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+    NSString*cat=[app.categories objectAtIndex:row];
+    return cat;
+}
+
+- (void)pickerView:(UIPickerView *)thePickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component {
+    AppDelegate *app = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+    //[self.categoryPicker setHidden:YES];
+    app.categoryIndex=row;
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"onChangeCategory"
+                                                        object:self
+                                                      userInfo:nil];
+}
+
+- (NSInteger)numberOfComponentsInPickerView:(UIPickerView *)thePickerView {
+    return 1;
+}
+
+/*
+-(UIView *)pickerView:(UIPickerView *)pickerView viewForRow:(NSInteger)row forComponent:(NSInteger)component reusingView:(UIView *)view
+{
+    UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 50, 44)]; // your frame, so picker gets "colored"
+    label.backgroundColor = [UIColor lightGrayColor];
+    label.textColor = [UIColor blackColor];
+    label.font = [UIFont fontWithName:@"HelveticaNeue-Bold" size:18];
+    label.text = [NSString stringWithFormat:@"%d",row];
+    
+    return label;
+}
+ */
 @end

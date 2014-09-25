@@ -7,7 +7,7 @@
 //
 
 #import "SectionDelegate.h"
-#import "UIImageView+WebCache.h"
+#import "UIImageView+AFNetworking.h"
 #import "SectionCell.h"
 #import "AppDelegate.h"
 #import "MainViewController.h"
@@ -58,10 +58,10 @@
     //SectionCell *cell=[self.cellArray objectAtIndex:indexPath.item];
     //return cell;
     
-    CGRect screenRect = [[UIScreen mainScreen] bounds];
-    float sh=screenRect.size.height;
-    float sw=screenRect.size.width;
-    CGRect bounds=CGRectMake(0,0, sw,sh-SUBSECTION_HEIGHT);
+    //CGRect screenRect = [[UIScreen mainScreen] bounds];
+    //float sh=screenRect.size.height;
+    //float sw=screenRect.size.width;
+    //CGRect bounds=CGRectMake(0,0, sw,sh-SUBSECTION_HEIGHT);
     
     
     NSMutableDictionary*d=[app.data objectAtIndex:indexPath.item];
@@ -92,21 +92,25 @@
         
         
         NSString *category=[d objectForKey:@"category" ];
-        NSArray*categorylist=[d objectForKey:@"category_list"];
-        if (categorylist!=nil && [categorylist count]){
-            category=[[categorylist objectAtIndex:0] objectForKey:@"name"];
-        }
+        //NSArray*categorylist=[d objectForKey:@"category_list"];
+        //if (categorylist!=nil && [categorylist count]){
+        //    category=[[categorylist objectAtIndex:0] objectForKey:@"name"];
+        //}
         [cell.labelCategory setText:category];
-        //[cell.labelDescription setText:[d objectForKey:@"description"]];
+        [cell.labelDescription setText:[d objectForKey:@"description"]];
         //[cell.labelDescription sizeToFit];
         
         [cell.labelTitle setTextColor:textcolor];
         [cell.labelCategory setTextColor:textcolor];
-        //[cell.labelDescription setTextColor:textcolor];
+        [cell.labelDescription setTextColor:textcolor];
         
-        NSString *pict=[NSString stringWithFormat:@"%@%@/picture?type=large",@FBG,[d valueForKey:@"id"] ];
-        [cell.imageViewPicture setImageWithURL:[NSURL URLWithString:pict] placeholderImage:nil];
-        
+        NSString *fbid=[d objectForKey:@"id"];
+        [cell.viewPicture setHidden:fbid==nil];
+        if (fbid!=nil){
+            NSString *pict=[NSString stringWithFormat:@"%@%@/picture?type=large",@FBG,[d valueForKey:@"id"] ];
+            [cell.imageViewPicture setImageWithURL:[NSURL URLWithString:pict] placeholderImage:nil];
+            
+        }
         
         NSDictionary *cover=[d objectForKey:@"cover" ] ;
         [cell.imageView setImage:nil];
@@ -115,7 +119,7 @@
             [cell.imageView setImageWithURL:[NSURL URLWithString:source] placeholderImage:nil];
             CGRect f0=CGRectMake(0,0,cell.frame.size.width,cell.frame.size.height);
             cell.imageView.frame=f0;
-            NSNumber *offset_y=[cover valueForKey:@"offset_y"];
+            NSNumber *offset_y=[cover valueForKey:@"_offset_y"];
             if ([offset_y intValue]>0){
                 CGRect f=cell.imageView.frame;
                 f.origin.y=[offset_y intValue];
@@ -183,13 +187,18 @@
         NSMutableDictionary*d=[app.data objectAtIndex:page];
         NSMutableArray*items=[d objectForKey:@"items"];
         if (items!=nil){
-            app.items=[NSMutableArray arrayWithArray:items];;
+            //app.items=[NSMutableArray arrayWithArray:items];;
         }else{
-            [app.items removeAllObjects];
+            //[app.items removeAllObjects];
         }
+        app.pageIndex=page;
         [self.controller.collectionView reloadData];
         self.controller.pageControl.currentPage=page;
         previousPage = page;
+        [[NSNotificationCenter defaultCenter] postNotificationName:@"onChangePage"
+                                                            object:self
+                                                          userInfo:nil];
+        [self.controller.categoryPicker setHidden:YES];
     }
 }
 
@@ -215,7 +224,7 @@
     float sh=screenRect.size.height;
     float sw=screenRect.size.width;
     //CGRect bounds=CGRectMake(0,0, sw,sh-SUBSECTION_HEIGHT);
-    CGSize retval = CGSizeMake(sw,sh-SUBSECTION_HEIGHT);
+    CGSize retval = CGSizeMake(sw,sh-SUBSECTION_HEIGHT-2);
     
     return retval;
 }

@@ -7,10 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <FacebookSDK/FacebookSDK.h>
 
-@interface RootViewController : UIViewController{
+@interface RootViewController : UIViewController<FBLoginViewDelegate>{
     UIImageView *imageView;
 }
 @property (weak, nonatomic) IBOutlet UILabel *labelTitle;
-- (void) loadFBPosts;
+- (void) loadFBId:(NSString*)fbid;
+- (void) loadFBPosts:(id)fb;
+- (void) loadFBLikes:(NSString*)fbid;
+- (void) addFBLoginView;
 @end
